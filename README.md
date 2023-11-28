@@ -4,29 +4,32 @@ Application Programming Interfaces that provide access to current & historical w
 # Prerequisites
 
 - Python
+- Fladk
 - Requests library
 - Openweather API
 
-
-# ODE EXPLAINATION: ☁☁🔻
-1. it will take input(city name) from user and convert it to longitude and latitude
-2. it will convert longitude and latitude to time zone and clock.
-3. now we will use longitude and latitude in api link to get data from OpenweatherApi . 
-4. you can import data like, temperature , climate, wind speed, pressure, cloud, image, humidity and many other things you want.
-5. we have use datetime module to get day name .
-
+# Brief Procedure
+Install the required libraries.
+Get your OpenWeatherMap API key.
+Run the application.
+Open Postman and create a new request to http://127.0.0.1:5000/weather with the GET method.
+Add a query param location with the value being the city and state (eg: Bengaluru, KA).
+Send the request and check the output.
+NOTE: You can check the accuracy of the retrieved weather data by OpenWeatherMap.
 
 # Weather API:  https://openweathermap.org
-
+# Detailed explanation
+Run the python script in VScode
+In the terminal you can see the base url http://127.0.0.1:5000. When you click on this url, you will see 404 error.
+Now go to your Postman workspace, set the request type to GET.
+Enter the URL for your Flask API endpoint i.e, http://127.0.0.1:5000/weather?.
+Click on the "Params" tab. In the "Key" column, enter location. In the "Value" column, enter the city and state for which you want to retrieve the weather information.
+Click the send button to make the request.
+Now go back to the base url, inorder to fetch the weather data, you have to append the base url with the api endpoint i.e, http://127.0.0.1:5000/weather?location=city,state (eg: http://127.0.0.1:5000/weather?location=Bengaluru, Karnataka&location=Shivamogga, Karnataka).
+Now you can see the json file.
 
 # Screenshots
 
-![2023-11-25 (1)](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/52fcceaa-8e8e-4b01-afc8-0de21c862e1f)
-![2023-11-25 (3)](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/172b0417-ed52-404c-98f7-6f42cf665b0a)
-![2023-11-25 (4)](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/63abc1a6-4611-4e5a-9fdd-29a8c23d92ae)
-![2023-11-25](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/48e194aa-b2e2-45ae-b253-f9858593762b)
-![Screenshot (11)](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/e1dbb811-22c2-4ea0-8780-41983dc54dda)
-![2023-11-25 (2)](https://github.com/Raghunayak01/Backend-API-for-Weather-Forecast/assets/150252274/7c5cba83-f070-40d0-b25c-514d5315e8f6)
 
 # Additionals
 This python script accepts multiple query parameters. The code includes the ability to retrieve weather information for multiple locations through the /weather endpoint.
